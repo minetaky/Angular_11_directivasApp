@@ -18,7 +18,7 @@
             <span dp-error-mgs
                 [mensaje] = "texto1"
                 [color] = "color"
-                *ngIf="tieneError('nombre')"></span>
+                [valido]="!tieneError('nombre')"></span>
         </div>
 
     </div>
