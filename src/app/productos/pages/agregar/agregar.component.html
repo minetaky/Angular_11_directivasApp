@@ -15,10 +15,9 @@
         </div>
 
         <div class="col-auto">
-            <span class="form-text"
-                dp-error-mgs
-                color="green"
-                mensaje="*Por favor ingrese este campo."
+            <span dp-error-mgs
+                [mensaje] = "texto1"
+                [color] = "color"
                 *ngIf="tieneError('nombre')"></span>
         </div>
 
@@ -26,11 +25,20 @@
 
     <div class="row mt-3">
         <div class="col">
-            <button class="btn btn-primary">
+            <button class="btn btn-primary"
+                    (click)="cambiarNombre()">
                 Guardar
             </button>
         </div>
+    </div>
 
+    <div class="row mt-3">
+        <div class="col">
+            <button class="btn btn-primary"
+                    (click)="cambiarColor()">
+                Cambiar Color
+            </button>
+        </div>
     </div>
 
 
